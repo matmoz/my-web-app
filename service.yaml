@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: my-web-app-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: my-web-app
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-
+      nodePort: 30001  # Port na każdym węźle
 
