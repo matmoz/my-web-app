@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: my-web-app
+        image: matmoz/my-web-app
         ports:
         - containerPort: 80
