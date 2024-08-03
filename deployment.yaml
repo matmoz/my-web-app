@@ -1,4 +1,3 @@
-# deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,6 +14,8 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: my-web-app
+        image: matmoz/my-web-app:latest
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: my-registry-secret
