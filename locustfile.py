@@ -5,6 +5,11 @@ class UserBehavior(TaskSet):
     def index(self):
         self.client.get("/")
 
+    @task(2)
+    def another_endpoint(self):
+        self.client.get("/another-endpoint")
+
 class WebsiteUser(HttpUser):
     tasks = [UserBehavior]
-    wait_time = between(1, 5)
+    wait_time = between(0.5, 1)  # Reduce wait time for more aggressive load
+
