@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-app-config
+data:
+  # This ConfigMap is empty as the application does not require any config
+  # You can add configurations here if needed
