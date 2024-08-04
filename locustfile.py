@@ -11,5 +11,5 @@ class UserBehavior(TaskSet):
 
 class WebsiteUser(HttpUser):
     tasks = [UserBehavior]
-    wait_time = between(0.5, 1)  # Reduce wait time for more aggressive load
+    wait_time = between(0.1, 0.5)  # Reduced wait time for higher load
 
